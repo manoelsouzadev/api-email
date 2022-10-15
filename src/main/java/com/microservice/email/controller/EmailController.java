@@ -28,7 +28,7 @@ import com.microservice.email.service.RabbitMQService;
  *
  * @author T-GAMER
  */
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = "*") 
 @RestController
 public class EmailController {
 
