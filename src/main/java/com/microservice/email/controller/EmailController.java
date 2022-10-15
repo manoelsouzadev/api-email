@@ -4,29 +4,31 @@
  */
 package com.microservice.email.controller;
 
-import com.microservice.email.dto.EmailDto;
-import com.microservice.email.enums.StatusEmail;
-import com.microservice.email.model.Anexo;
-import com.microservice.email.model.Email;
-import com.microservice.email.service.EmailService;
-import com.microservice.email.service.RabbitMQService;
-
 import java.time.LocalDateTime;
 
 import javax.validation.Valid;
+
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.microservice.email.dto.EmailDto;
+import com.microservice.email.enums.StatusEmail;
+import com.microservice.email.model.Email;
+import com.microservice.email.service.EmailService;
+import com.microservice.email.service.RabbitMQService;
 
 /**
  *
  * @author T-GAMER
  */
+@CrossOrigin(origins = "*")
 @RestController
 public class EmailController {
 
